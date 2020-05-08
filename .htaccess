@@ -1,0 +1,8 @@
+<IfModule mod_rewrite.c>
+Options +FollowSymLinks
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^www\.fasadtut\.by$ [NC]
+RewriteRule ^(.*)$ http://fasadtut.by$1 [R=301,L]
+RewriteCond %{HTTP_HOST} ^fasadtut.by.ezio.neolocation.net
+RewriteRule ^(.*)$ http://fasadtut.by/$1 [R=permanent,L]
+</IfModule>
